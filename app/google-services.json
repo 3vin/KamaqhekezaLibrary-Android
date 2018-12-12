@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "22303249984",
+    "firebase_url": "https://kamaqhekezalibrary-ee5bf.firebaseio.com",
+    "project_id": "kamaqhekezalibrary-ee5bf",
+    "storage_bucket": "kamaqhekezalibrary-ee5bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22303249984:android:0849ddc2af6a4b19",
+        "android_client_info": {
+          "package_name": "com.example.tevin.kamaqhekezalibrary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22303249984-ms7p0ivcdi6tud4vsab7fr62ci92rca7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tevin.kamaqhekezalibrary",
+            "certificate_hash": "4e9f4ab6a8ebeeee3abddb6e91cdfbee4aeda6c5"
+          }
+        },
+        {
+          "client_id": "22303249984-oj0cfoptpj1c8k814928u9ncob7shr7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0G3_L1kIOFXCaku7b0CLCG9xSWNVyoCo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22303249984-oj0cfoptpj1c8k814928u9ncob7shr7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

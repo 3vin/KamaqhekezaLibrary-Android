@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Kamaqhekeza Public Library</string>
+    <string name="btFacebook_label">Facebook</string>
+    <string name="btGoogle_label">Google</string>
+    <string name="title_activity_main">My Library</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_sign_out">Sign out</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="newsFeed_title">News Feed</string>
+    <string name="bookReview_title">Book Review</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_google_login">Sign in using Google</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_email_facebook">Email or Phone Number</string>
+    <string name="prompt_password">Password </string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_facebook_login">Sign in</string>
+    <string name="title_upload_image">Change or Add Picture</string>
+    <string name="title_add_story">Tell us what\'s happening</string>
+    <string name="bt_upload_title">Upload</string>
+    <string name="tvReadMore">Our 1st ever App</string>
+    <string name="tvAuthor">- By Author</string>
+    <string name="et_add_story_title">Write a title of your story</string>
+    <string name="et_add_story_story">Let\'s hear it, give us the details</string>
+    <string name="tabSuggestions_title">Share a Suggestion</string>
+
+    <!--Facebook ID -->
+    <string name="facebook_application_id">f520bae16574964b867a0e1fdc415759</string>
+    <string name="facebook_login_protocol_scheme">fbf520bae16574964b867a0e1fdc415759</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="action_map">Find us on a Map</string>
+</resources>
