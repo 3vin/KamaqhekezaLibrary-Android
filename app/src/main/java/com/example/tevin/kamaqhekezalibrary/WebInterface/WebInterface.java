@@ -1,4 +1,4 @@
-package com.example.tevin.kamaqhekezalibrary;
+package com.example.tevin.kamaqhekezalibrary.WebInterface;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

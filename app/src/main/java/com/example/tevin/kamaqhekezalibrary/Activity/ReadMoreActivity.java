@@ -1,4 +1,4 @@
-package com.example.tevin.kamaqhekezalibrary;
+package com.example.tevin.kamaqhekezalibrary.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,9 +8,11 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.tevin.kamaqhekezalibrary.Adapter.RecyclerAdapter;
+import com.example.tevin.kamaqhekezalibrary.R;
 
-import static com.example.tevin.kamaqhekezalibrary.RecyclerAdapter.FULL_STORY;
-import static com.example.tevin.kamaqhekezalibrary.RecyclerAdapter.IMAGE_URL;
+import static com.example.tevin.kamaqhekezalibrary.Adapter.RecyclerAdapter.FULL_STORY;
+import static com.example.tevin.kamaqhekezalibrary.Adapter.RecyclerAdapter.IMAGE_URL;
 
 public class ReadMoreActivity extends AppCompatActivity {
 
@@ -23,8 +25,8 @@ public class ReadMoreActivity extends AppCompatActivity {
 
         intent = getIntent();
         String title = intent.getStringExtra(RecyclerAdapter.TITLE);
-        String imageUrl = intent.getStringExtra(IMAGE_URL);
-        String fullStory = intent.getStringExtra(FULL_STORY);
+        String imageUrl = intent.getStringExtra(RecyclerAdapter.IMAGE_URL);
+        String fullStory = intent.getStringExtra(RecyclerAdapter.FULL_STORY);
 
         TextView tvTitle = findViewById(R.id.tvReadMore);
         ImageView ivImage = findViewById(R.id.ivReadStory);

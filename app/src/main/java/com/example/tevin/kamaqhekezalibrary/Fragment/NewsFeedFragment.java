@@ -1,4 +1,4 @@
-package com.example.tevin.kamaqhekezalibrary;
+package com.example.tevin.kamaqhekezalibrary.Fragment;
 
 
 import android.os.Bundle;
@@ -12,7 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
-import com.example.tevin.kamaqhekezalibrary.model.Upload;
+import com.example.tevin.kamaqhekezalibrary.R;
+import com.example.tevin.kamaqhekezalibrary.Adapter.RecyclerAdapter;
+import com.example.tevin.kamaqhekezalibrary.POJO.Upload;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,7 +34,7 @@ public class NewsFeedFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private DatabaseReference mDatabaseRef;
     private List<Upload> mUploads;
-    private  RecyclerAdapter mAdapter;
+    private RecyclerAdapter mAdapter;
     private ProgressBar mProgressCircle;
 
     public NewsFeedFragment() {

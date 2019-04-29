@@ -1,4 +1,4 @@
-package com.example.tevin.kamaqhekezalibrary;
+package com.example.tevin.kamaqhekezalibrary.Activity;
 
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -17,7 +17,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.tevin.kamaqhekezalibrary.model.Upload;
+import com.example.tevin.kamaqhekezalibrary.R;
+import com.example.tevin.kamaqhekezalibrary.POJO.Upload;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;

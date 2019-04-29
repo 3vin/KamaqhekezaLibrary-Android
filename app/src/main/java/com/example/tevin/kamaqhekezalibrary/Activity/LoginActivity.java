@@ -1,4 +1,4 @@
-package com.example.tevin.kamaqhekezalibrary;
+package com.example.tevin.kamaqhekezalibrary.Activity;
 
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.tevin.kamaqhekezalibrary.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -54,8 +55,10 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void signIn(){
-        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
+//        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+//        startActivityForResult(signInIntent, RC_SIGN_IN);
+        this.startActivity(new Intent(this, MainActivity.class));
+
     }
     @Override
     public void startActivityForResult(Intent intent, int requestCode) {
@@ -108,7 +111,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void updateUI(FirebaseUser user) {
        if(user != null){
-        Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         intent.putExtra(USER_OBJECT, user);
         startActivity(intent);
        }

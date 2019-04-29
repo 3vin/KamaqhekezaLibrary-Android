@@ -1,8 +1,8 @@
-package com.example.tevin.kamaqhekezalibrary.model;
+package com.example.tevin.kamaqhekezalibrary.POJO;
 
 import android.net.Uri;
 
-public class CardModel {
+public class Card {
     private Uri image;
     private  String title;
     private  String content;
@@ -11,10 +11,10 @@ public class CardModel {
         return image;
     }
 
-    public CardModel() {
+    public Card() {
     }
 
-    public CardModel(String title, String content) {
+    public Card(String title, String content) {
         this.title = title;
         this.content = content;
     }

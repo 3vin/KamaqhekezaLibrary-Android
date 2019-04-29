@@ -1,6 +1,7 @@
-package com.example.tevin.kamaqhekezalibrary;
+package com.example.tevin.kamaqhekezalibrary.Activity;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -15,6 +16,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.example.tevin.kamaqhekezalibrary.R;
+import com.example.tevin.kamaqhekezalibrary.Adapter.SectionsPagerAdapter;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -64,52 +68,53 @@ public class MainActivity extends AppCompatActivity {
         mViewPager.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
         //Tab layout on click
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                mViewPager.setCurrentItem(tab.getPosition());
-                if(tab.getPosition() == 0){
-                    toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
-                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
-                    abLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
-                    fab.show();
-
-                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-                        getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimaryDark));
-                    }
-                } else
-                    if(tab.getPosition() == 1) {
-                        toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDark));
-                        tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDark));
-                        abLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDark));
-                        fab.hide();
-
-                        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-                            getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimaryDark));
-                        }
-                    } else{
-                        toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
-                        tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
-                        abLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
-
-
-                        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-                            getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
-                        }
-
-                    }
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
+//        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+//            @Override
+//            public void onTabSelected(TabLayout.Tab tab) {
+//                mViewPager.setCurrentItem(tab.getPosition());
+//                if(tab.getPosition() == 0){
+//                    toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
+//                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
+//
+//                    abLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
+//                    fab.show();
+//
+//                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+//                        getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimaryDark));
+//                    }
+//                } else
+//                    if(tab.getPosition() == 1) {
+//                        toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDark));
+//                        tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDark));
+//                        abLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDark));
+//                        fab.hide();
+//
+//                        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+//                            getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimaryDark));
+//                        }
+//                    } else{
+//                        toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
+//                        tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
+//                        abLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
+//
+//
+//                        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+//                            getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
+//                        }
+//
+//                    }
+//            }
+//
+//            @Override
+//            public void onTabUnselected(TabLayout.Tab tab) {
+//
+//            }
+//
+//            @Override
+//            public void onTabReselected(TabLayout.Tab tab) {
+//
+//            }
+//        });
 
 
 
@@ -119,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                 /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();*/
 
-                Intent intent = new Intent(MainActivity.this,AddNewsActivity.class);
+                Intent intent = new Intent(MainActivity.this, AddNewsActivity.class);
                 startActivity(intent);
             }
         });
@@ -149,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }else
             if(id==R.id.action_map){
-                Intent intent = new Intent(MainActivity.this,MapsActivity.class);
+                Intent intent = new Intent(MainActivity.this, MapsActivity.class);
                 startActivity(intent);
             }
 

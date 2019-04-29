@@ -1,4 +1,4 @@
-package com.example.tevin.kamaqhekezalibrary;
+package com.example.tevin.kamaqhekezalibrary.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,7 +12,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.tevin.kamaqhekezalibrary.model.Upload;
+import com.example.tevin.kamaqhekezalibrary.R;
+import com.example.tevin.kamaqhekezalibrary.Activity.ReadMoreActivity;
+import com.example.tevin.kamaqhekezalibrary.POJO.Upload;
 
 import java.util.List;
 
@@ -22,10 +24,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Custom
     private List news;
     private LayoutInflater inflater;
 
-    static final String TITLE ="title";
-    static final String AUTHOR ="author";
-    static final String IMAGE_URL ="imgUrl";
-    static final String FULL_STORY ="fullStory";
+    public static final String TITLE ="title";
+    public static final String AUTHOR ="author";
+    public static final String IMAGE_URL ="imgUrl";
+    public static final String FULL_STORY ="fullStory";
 
     public RecyclerAdapter(Context context, List<Upload> news) {
         inflater = LayoutInflater.from(context);

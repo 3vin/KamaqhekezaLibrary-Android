@@ -1,24 +1,29 @@
-package com.example.tevin.kamaqhekezalibrary;
+package com.example.tevin.kamaqhekezalibrary.Fragment;
 
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.example.tevin.kamaqhekezalibrary.R;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Suggestion extends Fragment {
+public class BookReviewFragment extends Fragment {
 
 
-    public Suggestion() {
+    public BookReviewFragment() {
         // Required empty public constructor
     }
 
@@ -27,13 +32,14 @@ public class Suggestion extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View fragmentView = inflater.inflate(R.layout.fragment_suggestion, container, false);
-        WebView mWebView = fragmentView.findViewById(R.id.wvSuggestion);
+        View fragmentView = inflater.inflate(R.layout.fragment_book_review, container, false);
 
-        WebSettings mWebSettings = mWebView.getSettings();
+        final WebView mWebView = fragmentView.findViewById(R.id.wvBookReview);
+
+        final WebSettings mWebSettings = mWebView.getSettings();
         mWebSettings.setJavaScriptEnabled(true);
-        mWebSettings.setBlockNetworkLoads(true);
-        mWebSettings.setBuiltInZoomControls(false);
+        mWebSettings.setBlockNetworkLoads(false);
+        mWebSettings.setBuiltInZoomControls(true);
         mWebSettings.setDisplayZoomControls(false  );
         mWebSettings.setLoadWithOverviewMode(true);
         mWebSettings.setUseWideViewPort(true);
@@ -59,11 +65,25 @@ public class Suggestion extends Fragment {
                 //progress.setVisibility(View.GONE);
             }
 
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
+                mWebView.reload();
+                super.onReceivedError(view, request, error);
+            }
 
         });
-        mWebView.loadUrl("file:///android_asset/www/submit_suggestion.html");
-        mWebView.addJavascriptInterface(new WebInterface(getContext()),"Android");
+        mWebView.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_BACK && mWebView.canGoBack()) {
+                        mWebView.goBack();
+                        return true;
+                }else{
+                    return false;
+                }
+        }});
 
+        mWebView.loadUrl("https://www.bookreporter.com/");
         return fragmentView;
     }
 

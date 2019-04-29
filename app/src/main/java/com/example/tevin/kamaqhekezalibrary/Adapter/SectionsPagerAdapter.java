@@ -1,8 +1,12 @@
-package com.example.tevin.kamaqhekezalibrary;
+package com.example.tevin.kamaqhekezalibrary.Adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import com.example.tevin.kamaqhekezalibrary.Fragment.BookReviewFragment;
+import com.example.tevin.kamaqhekezalibrary.Fragment.NewsFeedFragment;
+import com.example.tevin.kamaqhekezalibrary.Fragment.SuggestionFragment;
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
@@ -21,9 +25,9 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 case 0:
                     return new NewsFeedFragment();
                     case 1:
-                        return  new BookReview();
+                        return  new BookReviewFragment();
                 case 2:
-                    return  new Suggestion();
+                    return  new SuggestionFragment();
                     default:
                         return new NewsFeedFragment();
             }

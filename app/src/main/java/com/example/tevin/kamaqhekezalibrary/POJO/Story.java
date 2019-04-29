@@ -1,4 +1,4 @@
-package com.example.tevin.kamaqhekezalibrary.model;
+package com.example.tevin.kamaqhekezalibrary.POJO;
 
 import android.net.Uri;
 
