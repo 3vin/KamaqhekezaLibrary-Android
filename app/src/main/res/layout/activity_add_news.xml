@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginHorizontal="@dimen/appbar_padding_top"
     android:layout_marginVertical="@dimen/appbar_padding_top"
-    tools:context=".AddNewsActivity"
+    tools:context=".Activity.AddNewsActivity"
     tools:layout_editor_absoluteY="25dp"
     android:background="@color/white">
 
@@ -23,7 +23,6 @@
         android:layout_height="0dp"
         android:layout_marginBottom="445dp"
         android:text="@string/title_add_story"
-        android:textColor="@color/colorPrimaryDarker"
         android:textSize="30sp"
         app:fontFamily="casual"
         app:layout_constraintBottom_toTopOf="@+id/progressUpload"

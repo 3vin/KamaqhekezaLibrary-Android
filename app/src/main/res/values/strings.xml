@@ -37,8 +37,6 @@
     <string name="tabSuggestions_title">Share a Suggestion</string>
 
     <!--Facebook ID -->
-    <string name="facebook_application_id">f520bae16574964b867a0e1fdc415759</string>
-    <string name="facebook_login_protocol_scheme">fbf520bae16574964b867a0e1fdc415759</string>
     <string name="title_activity_maps">Map</string>
     <string name="action_map">Find us on a Map</string>
 </resources>
